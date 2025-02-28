@@ -21,7 +21,7 @@ body {
 		lg:grid lg:grid-cols-[400px_430px] lg:gap-16;
 	}
 	.phone {
-		@apply relative bg-Primary-white rounded-[2.4rem] p-4 w-[370px] lg:ml-[5%];
+		@apply relative bg-Primary-white rounded-[2.4rem] p-4 w-[400px] lg:ml-[5%];
 		box-shadow: 15px 20px 30px -10px rgba(0,0,0,0.3);
 		zoom: .7
 	}
@@ -104,7 +104,7 @@ body {
 		@apply w-full mt-6 relative;
 	} 
 	.type-text::before {
-		@apply content-[''] absolute w-4 h-4 z-20 rounded-full right-[1%] top-[50%];
+		@apply content-[''] absolute w-4 h-4 z-20 rounded-full right-[1%] lg:right-[0.5%] top-[50%];
 		background-image: url('../images/right-arrow.png');
 		background-size: cover;
 		transform: translate(-50%, -50%);
