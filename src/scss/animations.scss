@@ -1,0 +1,39 @@
+.left-message {
+	animation: leftMessageAppear 0.4s linear;
+}
+
+.right-message {
+	animation: rightMessageAppear 0.4s linear;
+}
+
+.left-price-message {
+	animation: leftMessageAppear 0.4s linear;
+}
+
+@keyframes leftMessageAppear {
+	0% {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+	30% {
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0%);
+		opacity: 1;
+	}
+}
+
+@keyframes rightMessageAppear {
+	0% {
+		transform: translateX(100%);
+		opacity: 0;
+	}
+	30% {
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0%);
+		opacity: 1;
+	}
+}

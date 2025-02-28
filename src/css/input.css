@@ -36,13 +36,13 @@ body {
 	}
 	.phone-header::before {
 		@apply content-[''] absolute w-5 h-5 top-[65%] left-[8%];
-		background-image: url('../images/left-arrow.png');	
+		background-image: url('/images/left-arrow.png');	
 		background-size: cover;
 		transform: translate(-50%, -50%);
 	}
 	.phone-header::after {
 		@apply content-[''] absolute w-6 h-6 top-[65%] right-[1.5%];
-		background-image: url('../images/dots.png');	
+		background-image: url('/images/dots.png');	
 		background-size: cover;
 		transform: translate(-50%, -50%);
 	}

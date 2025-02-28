@@ -2,7 +2,7 @@
 module.exports = {
   content: [
     './index.html',
-    './src/input.css',
+    './src/css/input.css',
   ],
   theme: {
     extend: {
