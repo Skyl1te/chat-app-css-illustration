@@ -7,6 +7,8 @@ html {
 }
 
 body {
+	display: grid;
+	place-content: center;
 	font-family: "Rubik", sans-serif;
 	font-optical-sizing: auto;
 	font-weight: 400;
@@ -15,10 +17,13 @@ body {
 
 @layer components {
 	.container {
-		@apply p-2;
+		@apply p-2 flex flex-col items-center
+		lg:grid lg:grid-cols-[400px_430px] lg:gap-16;
 	}
 	.phone {
-		@apply relative bg-Primary-white rounded-[2.4rem] p-4 w-[100%] max-w-[310px] ;
+		@apply relative bg-Primary-white rounded-[2.4rem] p-4 w-[100%] max-w-[370px] lg:ml-[5%];
+		box-shadow: 15px 20px 30px -10px rgba(0,0,0,0.3);
+		zoom: .7
 	}
 	.phone-header {
 		@apply relative w-full flex items-end justify-start h-28 rounded-t-[2.4rem] p-4
@@ -51,7 +56,7 @@ body {
 		@apply p-4 flex flex-col bg-Primary-light-grayish-violet rounded-b-[2.4rem];
 	}
 	.message {
-		zoom: .6; 	
+		zoom: .7; 	
 		@apply mt-4 p-4 font-medium text-base w-auto max-w-64;
 	}
 	.left-message {
@@ -67,7 +72,7 @@ body {
 		@apply flex items-center justify-end gap-x-2 mt-5;
 	}
 	.right-imgs img{
-		@apply w-12 h-12 rounded-xl;
+		@apply w-16 h-16 rounded-xl;
 	}
 	.left-price-message {
 		@apply flex justify-between items-center
@@ -99,7 +104,7 @@ body {
 		@apply w-full mt-6 relative;
 	} 
 	.type-text::before {
-		@apply content-[''] absolute w-4 h-4 z-20 rounded-full right-[3%] top-[50%];
+		@apply content-[''] absolute w-4 h-4 z-20 rounded-full right-[1%] top-[50%];
 		background-image: url('../images/right-arrow.png');
 		background-size: cover;
 		transform: translate(-50%, -50%);
@@ -110,4 +115,13 @@ body {
 		transform: translate(-50%, -50%);
 	} 
 
+}
+
+@media (min-width: 1024px) {
+	.phone {
+		zoom: .8;
+	}
+	.left-price-message {
+		zoom: .85;
+	}
 }
