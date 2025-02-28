@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+	font-size: 100%;
+}
+
+body {
+	font-family: "Rubik", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
+
+@layer components {
+	.container {
+		@apply p-2;
+	}
+	.phone {
+		@apply relative bg-Primary-white rounded-[2.4rem] p-4 w-[100%] max-w-[310px] ;
+	}
+	.phone-header {
+		@apply relative w-full flex items-end justify-start h-28 rounded-t-[2.4rem] p-4
+        bg-gradient-to-r from-Primary-light-violet  to-Primary-light-magenta;
+		zoom: .8;
+	}
+	.phone::before {
+		@apply content-[''] absolute top-[3%] left-[50%] w-44 h-[2.3rem] z-10 bg-Primary-white rounded-full;
+		transform: translate(-50%, -50%);
+	}
+	.phone-header::before {
+		@apply content-[''] absolute w-5 h-5 top-[65%] left-[8%];
+		background-image: url('../images/left-arrow.png');	
+		background-size: cover;
+		transform: translate(-50%, -50%);
+	}
+	.phone-header::after {
+		@apply content-[''] absolute w-6 h-6 top-[65%] right-[1.5%];
+		background-image: url('../images/dots.png');	
+		background-size: cover;
+		transform: translate(-50%, -50%);
+	}
+	.person {
+		@apply relative flex pl-10;
+	}
+	.person__img {
+		@apply w-12 h-12 rounded-full border-[3px] border-Primary-white;
+	}
+	.phone-screen {
+		@apply p-4 flex flex-col bg-Primary-light-grayish-violet rounded-b-[2.4rem];
+	}
+	.message {
+		zoom: .6; 	
+		@apply mt-4 p-4 font-medium text-base w-auto max-w-64;
+	}
+	.left-message {
+		@apply bg-Primary-pale-violet bg-opacity-20 text-Primary-moderate-violet
+		rounded-r-3xl rounded-tl-3xl rounded-bl-md;
+	}
+	.right-message {
+		@apply bg-Primary-white text-Primary-very-dark-desaturated-violet-bg
+		rounded-l-3xl rounded-tr-3xl rounded-br-md 
+		self-end;
+	}
+	.right-imgs {
+		@apply flex items-center justify-end gap-x-2 mt-5;
+	}
+	.right-imgs img{
+		@apply w-12 h-12 rounded-xl;
+	}
+	.left-price-message {
+		@apply flex justify-between items-center
+		rounded-r-3xl rounded-tl-3xl rounded-bl-md
+		bg-gradient-to-r from-Primary-light-magenta to-Primary-light-violet max-w-[19rem];
+	}
+	.left-price-message .circle {
+		@apply h-6 w-6 rounded-full border-2 border-Primary-light-grayish-violet;
+	}
+	.left-price-message .offer{
+		@apply flex items-center;
+	}
+	.left-price-message .price {
+		@apply font-bold text-xl		text-Primary-light-grayish-violet mr-2;
+	}
+	.left-price-message .price::before {
+		content: "$";
+	}
+	.left-price-message .offer-text {
+		@apply text-Primary-light-grayish-violet font-light text-base ml-4;
+	}
+	.type-text input {
+		@apply w-full text-sm p-3 pl-8 rounded-full;
+	}
+	.type-text input::placeholder {
+		@apply text-[.8rem];
+	}
+	.type-text {
+		@apply w-full mt-6 relative;
+	} 
+	.type-text::before {
+		@apply content-[''] absolute w-4 h-4 z-20 rounded-full right-[3%] top-[50%];
+		background-image: url('../images/right-arrow.png');
+		background-size: cover;
+		transform: translate(-50%, -50%);
+	} 
+	.type-text::after {
+		@apply content-[''] absolute w-9 h-9 z-10 
+		bg-Primary-very-dark-desaturated-violet-bg rounded-full right-[-5%] top-[50%];
+		transform: translate(-50%, -50%);
+	} 
+
+}
