@@ -926,6 +926,10 @@ video {
   z-index: 20;
 }
 
+.z-40 {
+  z-index: 40;
+}
+
 .ml-4 {
   margin-left: 1rem;
 }
